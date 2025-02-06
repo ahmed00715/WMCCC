@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windham Muslim Community Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="wmccLogo.png" alt="WMCC Logo" class="logo">
+                <div class="logo-text">
+                    <h1>WMCC</h1>
+                    <p>Windham Muslim Community Center</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="prayer-times.html">Prayer Times</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="school.html">Islamic School</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="donate-btn">
+                <i class="fas fa-heart"></i>
+                Donate
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Windham Muslim Community Center</h1>
+            <p>A place of worship, learning, and unity in faith</p>
+            <div class="next-prayer">
+                <h2>Next Prayer</h2>
+                <div id="next-prayer-time"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="daily-reflection">
+        <div class="reflection-container">
+            <h2>Daily Reflection</h2>
+            <div class="quote-container">
+                <div class="quote">
+                    <p class="arabic">إِنَّ اللَّهَ مَعَ الصَّابِرِينَ</p>
+                    <p class="translation"><em>Indeed, Allah is with those who are patient</em></p>
+                    <p class="reference">Surah Al-Baqarah 2:153</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="cards-container">
+            <!-- Prayer Times Row -->
+            <div class="card-row">
+                <div class="card prayer-times-card">
+                    <div class="card-header">
+                        <i class="fas fa-clock"></i>
+                        <h2>Prayer Times</h2>
+                    </div>
+                    <div id="prayer-schedule" class="prayer-schedule"></div>
+                    <a href="prayer-times.html" class="btn">View Full Schedule</a>
+                </div>
+            </div>
+    
+            <!-- Events Row -->
+            <div class="card-row">
+                <div class="card events-card">
+                    <div class="card-header">
+                        <i class="fas fa-calendar"></i>
+                        <h2>Upcoming Events</h2>
+                    </div>
+                    <div id="events-list" class="events-list"></div>
+                    <a href="events.html" class="btn">View All Events</a>
+                </div>
+            </div>
+    
+            <!-- Contact Row -->
+            <div class="card-row">
+                <div class="card contact-card">
+                    <div class="card-header">
+                        <i class="fas fa-envelope"></i>
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 27 Roulston Rd. Windham, New Hampshire</p>
+                        <p><i class="fas fa-phone"></i> (603) 874-1362</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@wmcc.org">contact@wmcc.org</a></p>
+                    </div>
+                    <a href="contact.html" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+    .main-content {
+        padding: 2rem;
+        background-color: #f5f5f5;
+    }
+    
+    .cards-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .card-row {
+        width: 100%;
+    }
+    
+    .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+    .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-header i {
+        font-size: 1.5rem;
+        color: #1A5A5E;
+    }
+    
+    .card-header h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #1A5A5E;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 1rem;
+        transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+        background-color: #b9a901;
+    }
+    
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contact-info p {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0;
+    }
+    
+    .contact-info i {
+        color: #1A5A5E;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .main-content {
+            padding: 1rem;
+        }
+        
+        .card {
+            padding: 1rem;
+        }
+    }
+    </style>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About WMCC</h3>
+            <p>Serving the Muslim community in Windham and surrounding areas through worship, education, and community service.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+                <li><a href="prayer-times.html">Prayer Times</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="school.html">Islamic School</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/WMCCNH" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/wmcc_nh/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © Windham Muslim Community Center (WMCC) is a 501(c)(3) NGO EIN: 83-2954400</p>
+        <p>All rights reserved</p>
+    </div>
+</footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
